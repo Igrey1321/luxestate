@@ -4,14 +4,35 @@ class DomListener{
   }
 }
 
-const $ = new DomListener()
+const burger = new DomListener()
 
 const headerMenu = document.querySelector('.header__menu')
 const headerBurger = document.querySelector('.header__burger')
 const bodyTeg = document.querySelector('body')
 
 headerBurger.addEventListener('click', (event) => {
-  $.triggerClass(headerMenu, 'active')
-  $.triggerClass(headerBurger, 'active')
-  $.triggerClass(bodyTeg, 'lock')
+  burger.triggerClass(headerMenu, 'active')
+  burger.triggerClass(headerBurger, 'active')
+  burger.triggerClass(bodyTeg, 'lock')
 })
+
+$(document).ready(function(){
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    autoplay:true,
+    dots:false,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:3
+        }
+    }
+  });
+});
