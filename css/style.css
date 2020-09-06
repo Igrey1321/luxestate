@@ -1064,6 +1064,9 @@ footer {
   .appartments_many {
     padding: 50px 0 30px 0;
   }
+  .statistics__component {
+    margin: 15px 15px;
+  }
   .statistics__animation {
     justify-content: center;
   }
